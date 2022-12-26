@@ -5,7 +5,9 @@ const application = {
             message: "Voici ma prémière application Vue js 3",
             width: 500,
             height: 300,
-            fruits: ['Orange', 'Banana', 'cherise', 'mango']
+            fruits: ['Orange', 'Banana', 'cherise', 'mango'],
+            lien: 'https://alphorm.com',
+            image: 'images/img.png'
         }
     },
     methods: {

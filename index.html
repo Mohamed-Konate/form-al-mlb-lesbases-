@@ -18,13 +18,20 @@
     <p>{{bonjour()}}</p>
     <p>L'aire d'un carré de 5 mètres de coté est de {{ getSquareSurface(5)}} m2</p>
     <p>L'aire d'un rectangle de {{width}}m de largeur et {{ height }}m de longueur est de {{ getRectangleSurface()
-        }}m2 </p>
+        }}m2
+    </p>
+    <div>
+        <ul>
+            <li v-for="fruit in fruits">
+                {{fruit}}
+            </li>
+        </ul>
+    </div>
     <p>
-    <ul>
-        <li v-for="fruit in fruits">
-            {{fruit}}
-        </li>
-    </ul>
+        <a :href="lien" target="_blank">Alphorm</a>
+    </p>
+    <p>
+        <img :src="image" alt="The line" width="500" height="500">
     </p>
 
 
