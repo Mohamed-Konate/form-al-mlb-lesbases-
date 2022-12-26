@@ -33,6 +33,14 @@
     <p>
         <img :src="image" alt="The line" width="500" height="500">
     </p>
+    <div>
+        <button class="btn btn-danger" v-on:click="redButton()">Bouton rouge</button>
+        <br><br>
+        <button class="btn btn-primary" @click="blueButton()">Bouton Bleu</button>
+        <br><br>
+        <button class="btn btn-dark" @mouseleave="blackButton()">Bouton noir</button>
+        <br><br>
+    </div>
 
 
 </div>

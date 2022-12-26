@@ -19,7 +19,17 @@ const application = {
         },
         getRectangleSurface: function (){
             return this.width * this.height
+        },
+        redButton: function (){
+            return alert('Tu as cliqué sur le bouton rouge !')
+        },
+        blueButton: function (){
+            return alert('Tu as cliqué sur le bouton bleu!')
+        },
+        blackButton: function (){
+            return alert('La souris est sorti du bouton noir !')
         }
+
 
     }
 }
