@@ -17,7 +17,16 @@
     <p>{{message}}</p>
     <p>{{bonjour()}}</p>
     <p>L'aire d'un carré de 5 mètres de coté est de {{ getSquareSurface(5)}} m2</p>
-    <p>L'aire d'un rectangle de {{width}}m de largeur et {{ height }}m de longueur est de {{ getRectangleSurface() }}m2 </p>
+    <p>L'aire d'un rectangle de {{width}}m de largeur et {{ height }}m de longueur est de {{ getRectangleSurface()
+        }}m2 </p>
+    <p>
+    <ul>
+        <li v-for="fruit in fruits">
+            {{fruit}}
+        </li>
+    </ul>
+    </p>
+
 
 </div>
 

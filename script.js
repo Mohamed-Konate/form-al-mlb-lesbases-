@@ -5,6 +5,7 @@ const application = {
             message: "Voici ma prémière application Vue js 3",
             width: 500,
             height: 300,
+            fruits: ['Orange', 'Banana', 'cherise', 'mango']
         }
     },
     methods: {
