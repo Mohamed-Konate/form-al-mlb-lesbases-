@@ -7,7 +7,8 @@ const application = {
             height: 300,
             fruits: ['Orange', 'Banana', 'cherise', 'mango'],
             lien: 'https://alphorm.com',
-            image: 'images/img.png'
+            image: 'images/img.png',
+            animal: false
         }
     },
     methods: {
