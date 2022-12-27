@@ -12,7 +12,8 @@ const application = {
             message_v_model: 'Message par defaut',
             done: false,
             textHtml: '<p class="text-danger"> Attention !</p>',
-            km:0
+            km:0,
+            finish: 5
         }
     },
     methods: {
@@ -47,5 +48,13 @@ const application = {
     created(){
         this.drive()
     },
+    watch: {
+        km: function(){
+            if (this.km===this.finish){
+                console.log('Tu es arrivé !')
+                this.km = 0;
+            }
+        }
+    }
 }
 Vue.createApp(application).mount('#app')
