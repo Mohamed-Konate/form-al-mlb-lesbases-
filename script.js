@@ -8,7 +8,8 @@ const application = {
             fruits: ['Orange', 'Banana', 'cherise', 'mango'],
             lien: 'https://alphorm.com',
             image: 'images/img.png',
-            animal: false
+            animal: false,
+            message_v_model: 'Message par defaut'
         }
     },
     methods: {
