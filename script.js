@@ -11,7 +11,8 @@ const application = {
             animal: false,
             message_v_model: 'Message par defaut',
             done: false,
-            textHtml: '<p class="text-danger"> Attention !</p>'
+            textHtml: '<p class="text-danger"> Attention !</p>',
+            km:0
         }
     },
     methods: {
@@ -32,9 +33,19 @@ const application = {
         },
         blackButton: function (){
             return alert('La souris est sorti du bouton noir !')
+        },
+        drive: function(){
+            setInterval(()=>{
+                this.km++
+            }, 1000)
         }
 
-
-    }
+    },
+    beforeCreate(){
+        console.log(this.km)
+    },
+    created(){
+        this.drive()
+    },
 }
 Vue.createApp(application).mount('#app')
