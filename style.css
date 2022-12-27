@@ -1,4 +1,7 @@
 #app{
     text-align: center;
-    margin: 75 auto;
+    margin: 75px auto;
+}
+.executed{
+    text-decoration: line-through;
 }

@@ -9,7 +9,8 @@ const application = {
             lien: 'https://alphorm.com',
             image: 'images/img.png',
             animal: false,
-            message_v_model: 'Message par defaut'
+            message_v_model: 'Message par defaut',
+            done: false
         }
     },
     methods: {
