@@ -10,7 +10,8 @@ const application = {
             image: 'images/img.png',
             animal: false,
             message_v_model: 'Message par defaut',
-            done: false
+            done: false,
+            textHtml: '<p class="text-danger"> Attention !</p>'
         }
     },
     methods: {
