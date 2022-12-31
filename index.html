@@ -32,11 +32,19 @@
             </button>
         </li>
     </ul>
+    <div class="alert alert-danger" v-if="errors.length">
+        <p v-for="error in errors">{{error}}</p>
+    </div>
     <div class="row">
         <form action="">
             <div class="input-group mt-3">
-                <input class="form-control" type="text" placeholder="Ajouter une tâche">
-                <button class="btn btn-primary" type="button">Ajouter</button>
+                <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Ajouter une tâche"
+                        v-model="newTask.name"
+                >
+                <button @click="addTask()" class="btn btn-primary" type="button">Ajouter</button>
             </div>
         </form>
     </div>

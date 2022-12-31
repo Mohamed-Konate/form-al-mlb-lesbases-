@@ -1,13 +1,25 @@
 const application = {
     data(){
         return {
-            tasks: [
-                {name: 'Task 1', done: false},
-                {name: 'Task 2', done: true},
-            ]
+            tasks: [],
+            newTask: {
+                done: false
+            },
+            errors: [],
         }
     },
     methods: {
+
+        addTask(){
+            this.errors = [];
+            if(!this.newTask.name){
+                this.errors.push("Please enter a name");
+                return false;
+            }
+            this.tasks.push(this.newTask);
+            this.newTask = {}
+        }
+
 
     },
 
