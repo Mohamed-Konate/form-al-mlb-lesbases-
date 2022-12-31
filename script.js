@@ -28,6 +28,12 @@ const application = {
             this.tasks = [];
             this.newTask = {};
         },
+        removeTask(task) {
+            if(!confirm(`Voulez-vous supprimer la tâche : ${task.name} ?`)){
+                return false;
+            }
+            this.tasks = this.tasks.filter(el => el !== task);
+        }
     },
     created(){
         this.tasks = localStorage.getItem('tasks')? JSON.parse(localStorage.getItem('tasks')): this.tasks;

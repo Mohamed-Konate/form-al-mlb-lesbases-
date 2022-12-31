@@ -22,6 +22,12 @@
         >
             {{task.name}}
             <button
+                    class="btn btn-danger delete"
+                    @click="removeTask(task)"
+            >
+                <i class="bi bi-trash"></i>
+            </button>
+            <button
                     @click="task.done = !task.done"
                     class="delete"
                     :class="{'btn btn-danger': !task.done, 'btn btn-warning': task.done}"
