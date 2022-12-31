@@ -32,6 +32,9 @@ const application = {
     created(){
         this.tasks = localStorage.getItem('tasks')? JSON.parse(localStorage.getItem('tasks')): this.tasks;
     },
+    mounted(){
+        this.$refs.task_name.focus();
+    },
     updated(){
         localStorage.setItem('tasks', JSON.stringify(this.tasks))
     }
