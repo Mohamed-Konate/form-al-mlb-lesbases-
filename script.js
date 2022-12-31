@@ -27,10 +27,11 @@ const application = {
             this.errors = [];
             this.tasks = [];
             this.newTask = {};
-        }
-
-
+        },
     },
+    created(){
+        this.tasks = localStorage.getItem('tasks')? JSON.parse(localStorage.getItem('tasks')): this.tasks;
+    }
 
 }
 Vue.createApp(application).mount('#app')
