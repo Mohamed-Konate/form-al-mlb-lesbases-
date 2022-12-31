@@ -18,6 +18,14 @@ const application = {
             }
             this.tasks.push(this.newTask);
             this.newTask = {}
+        },
+        removeAll(){
+            if(!confirm("Voulez-vous tous supprimer?")){
+                return false;
+            }
+            this.errors = [];
+            this.tasks = [];
+            this.newTask = {};
         }
 
 

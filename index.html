@@ -32,6 +32,9 @@
             </button>
         </li>
     </ul>
+    <br>
+    <button @click="removeAll()" type="button" class="btn btn-danger">Tout supprimer</button>
+    <br>
     <div class="alert alert-danger" v-if="errors.length">
         <p v-for="error in errors">{{error}}</p>
     </div>
@@ -44,7 +47,7 @@
                         placeholder="Ajouter une tâche"
                         v-model="newTask.name"
                 >
-                <button @click="addTask()" class="btn btn-primary" type="button">Ajouter</button>
+                <button @click="addTask()" class="btn btn-primary " type="button">Ajouter</button>
             </div>
         </form>
     </div>
