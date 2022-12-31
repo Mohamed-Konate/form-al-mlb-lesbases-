@@ -18,6 +18,7 @@ const application = {
             }
             this.tasks.push(this.newTask);
             this.newTask = {}
+            this.$refs.task_name.focus();
         },
         removeAll(){
             if(!confirm("Voulez-vous tous supprimer?")){

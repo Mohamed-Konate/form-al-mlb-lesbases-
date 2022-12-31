@@ -46,6 +46,7 @@
                         type="text"
                         placeholder="Ajouter une tâche"
                         v-model="newTask.name"
+                        ref="task_name"
                 >
                 <button @click="addTask()" class="btn btn-primary " type="button">Ajouter</button>
             </div>
