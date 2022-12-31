@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="container main" id="app">
-    <ul class="list-group">
+    <ul class="list-group" id="todo_list">
         <li
                 v-for="task in tasks"
                 class="list-group-item"
@@ -22,6 +22,7 @@
         >
             {{task.name}}
             <button
+                    @click="task.done = !task.done"
                     class="delete"
                     :class="{'btn btn-danger': !task.done, 'btn btn-warning': task.done}"
             >
