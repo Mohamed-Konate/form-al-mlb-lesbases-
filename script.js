@@ -17,7 +17,6 @@ const application = {
                 return false;
             }
             this.tasks.push(this.newTask);
-            localStorage.setItem('tasks', JSON.stringify(this.tasks))
             this.newTask = {}
         },
         removeAll(){
@@ -31,6 +30,9 @@ const application = {
     },
     created(){
         this.tasks = localStorage.getItem('tasks')? JSON.parse(localStorage.getItem('tasks')): this.tasks;
+    },
+    updated(){
+        localStorage.setItem('tasks', JSON.stringify(this.tasks))
     }
 
 }
