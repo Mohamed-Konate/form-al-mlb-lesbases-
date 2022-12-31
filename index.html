@@ -8,62 +8,37 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container main" id="app">
-    <h1>{{ title}}</h1>
-    <p>{{message}}</p>
-    <p>{{bonjour()}}</p>
-    <p>L'aire d'un carré de 5 mètres de coté est de {{ getSquareSurface(5)}} m2</p>
-    <p>L'aire d'un rectangle de {{width}}m de largeur et {{ height }}m de longueur est de {{ getRectangleSurface()
-        }}m2
-    </p>
-    <div>
-        <ul>
-            <li v-for="fruit in fruits">
-                {{fruit}}
-            </li>
-        </ul>
-    </div>
-    <p>
-        <a :href="lien" target="_blank">Alphorm</a>
-    </p>
-    <p>
-        <img :src="image" alt="The line" width="500" height="500">
-    </p>
-    <div>
-        <button class="btn btn-danger" v-on:click="redButton()">Bouton rouge</button>
-        <br><br>
-        <button class="btn btn-primary" @click="blueButton()">Bouton Bleu</button>
-        <br><br>
-        <button class="btn btn-dark" @mouseleave="blackButton()">Bouton noir</button>
-        <br><br>
-    </div>
-    <div>
-        <p v-if="animal">
-            {{message}}
-        </p>
-    </div>
-    <div>
-        <input type="text" v-model="message_v_model">
-        <p>{{ message_v_model }}</p>
-    </div>
-    <hr>
+    <ul class="list-group">
+        <li
+                v-for="task in tasks"
+                class="list-group-item"
+                :class="{done: task.done}"
+        >
+            {{task.name}}
+            <button
+                    class="delete"
+                    :class="{'btn btn-danger': !task.done, 'btn btn-warning': task.done}"
+            >
 
-    <h3
-            class="text-dark"
-            @click="done = !done"
-            :class="{executed : done}"
-    >
-        Hello world
-    </h3>
-    <hr>
-    <div> {{textHtml}}</div>
-    <div v-html="textHtml"></div>
-    <hr>
-    <div>{{km}} km(s)</div>
+                <i
+                    :class="{'bi bi-check': !task.done, 'bi bi-arrow-clockwise': task.done}"></i>
+            </button>
+        </li>
+    </ul>
+    <div class="row">
+        <form action="">
+            <div class="input-group mt-3">
+                <input class="form-control" type="text" placeholder="Ajouter une tâche">
+                <button class="btn btn-primary" type="button">Ajouter</button>
+            </div>
+        </form>
+    </div>
 
 
 </div>

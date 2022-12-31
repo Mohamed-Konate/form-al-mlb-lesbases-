@@ -5,3 +5,12 @@
 .executed{
     text-decoration: line-through;
 }
+
+#todo_list li.done{
+    text-decoration: line-through;
+    color: darkgrey;
+}
+
+button{
+    float: right;
+}
